@@ -48,14 +48,15 @@
 .program-image-container {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 340px; /* Increased height to show more vertical area (legs) */
 }
 
 .program-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* Shifted up to show the face */
+  object-position: center 25%; /* Balanced to show face and legs */
+  filter: brightness(0.75); /* Darkened the photo slightly */
   position: absolute;
   top: 0;
   left: 0;
