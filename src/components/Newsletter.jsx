@@ -19,16 +19,10 @@ export default function Newsletter() {
     e.preventDefault();
     setStatus('loading');
 
-    // 🔴 REEMPLAZA ESTE ENLACE con tu ID de Formspree (Ej: https://formspree.io/f/xabcdefg)
-    const FORM_ENDPOINT = "https://formspree.io/f/TU_ID_AQUI";
+    // Enlace de Formspree oficial del Proyecto
+    const FORM_ENDPOINT = "https://formspree.io/f/xgopdeek";
 
     try {
-      if (FORM_ENDPOINT.includes("TU_ID_AQUI")) {
-        // Simulación visual si aún no han puesto el enlace verdadero
-        setTimeout(() => setStatus('success'), 1500);
-        return;
-      }
-
       const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {
