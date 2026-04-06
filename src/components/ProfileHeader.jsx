@@ -2,11 +2,12 @@ import React from 'react';
 import './ProfileHeader.css';
 
 export default function ProfileHeader() {
+  const base = import.meta.env.BASE_URL;
   return (
     <div className="profile-header">
       <div className="profile-image-container">
         <img 
-          src="/images/Cisne.png" 
+          src={`${base}images/Cisne.png`} 
           alt="Cisne Almeida" 
           className="profile-image" 
         />

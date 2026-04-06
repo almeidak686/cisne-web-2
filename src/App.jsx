@@ -7,10 +7,11 @@ import Newsletter from './components/Newsletter';
 import './App.css';
 
 function App() {
+  const base = import.meta.env.BASE_URL;
   return (
     <>
       <video className="video-background" autoPlay loop muted playsInline>
-        <source src="/videos/ssstik.io_1775490866311.mp4" type="video/mp4" />
+        <source src={`${base}videos/ssstik.io_1775490866311.mp4`} type="video/mp4" />
       </video>
       <div className="video-overlay"></div>
       

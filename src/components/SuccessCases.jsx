@@ -2,9 +2,10 @@ import React from 'react';
 import './SuccessCases.css';
 
 export default function SuccessCases() {
+  const base = import.meta.env.BASE_URL;
   const images = [
-    '/images/WhatsApp Image 2026-03-01 at 14.01.30.jpeg',
-    '/images/Gemini_Generated_Image_.png'
+    `${base}images/WhatsApp Image 2026-03-01 at 14.01.30.jpeg`,
+    `${base}images/Gemini_Generated_Image_.png`
   ];
 
   return (
