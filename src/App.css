@@ -75,8 +75,8 @@
 .ambient-glow.glow-bottom {
   top: auto;
   bottom: -800px;
-  width: 1200px;
-  height: 1200px;
+  width: 2400px;
+  height: 1400px;
   background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, rgba(192, 132, 252, 0.08) 35%, rgba(192, 132, 252, 0) 55%);
 }
 
