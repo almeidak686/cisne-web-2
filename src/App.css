@@ -74,7 +74,7 @@
 /* Segunda luz para PC — zona baja */
 .ambient-glow.glow-bottom {
   top: auto;
-  bottom: -500px;
+  bottom: -600px; /* Mitad exacta: solo la semi-circunferencia superior es visible */
   width: 1200px;
   height: 1200px;
   background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, rgba(192, 132, 252, 0.08) 35%, rgba(192, 132, 252, 0) 55%);
