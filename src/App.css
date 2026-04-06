@@ -66,6 +66,18 @@
     height: 150vw;
     background: radial-gradient(circle, rgba(192, 132, 252, 0.35) 0%, rgba(192, 132, 252, 0.12) 25%, rgba(192, 132, 252, 0) 50%);
   }
+  .ambient-glow.glow-bottom {
+    display: none; /* En celular no hace falta la segunda luz */
+  }
+}
+
+/* Segunda luz para PC — zona baja */
+.ambient-glow.glow-bottom {
+  top: auto;
+  bottom: -20vh;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.18) 0%, rgba(192, 132, 252, 0.05) 35%, rgba(192, 132, 252, 0) 55%);
 }
 
 /* Global Lightbox Effect para Imágenes (Transformaciones) */

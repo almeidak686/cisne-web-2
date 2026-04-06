@@ -13,6 +13,7 @@ function App() {
       </video>
       <div className="video-overlay"></div>
       <div className="ambient-glow"></div>
+      <div className="ambient-glow glow-bottom"></div>
       
       <Routes>
         <Route path="/" element={<Home />} />
