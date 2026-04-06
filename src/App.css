@@ -47,24 +47,27 @@
 
 .ambient-glow {
   position: fixed;
-  top: 15vh; /* Altura ideal en PC para coincidir con el nombre de Cisne */
+  top: 15vh;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, var(--accent-color) 0%, transparent 65%);
-  opacity: 0.35; /* Mucho más visible para que se note el destello púrpura */
-  z-index: 2; /* Encima del video, debajo del contenido general de la app */
+  /* Color explícito rgba en lugar de variable CSS — más fiable en móviles */
+  background: radial-gradient(circle, rgba(232, 88, 42, 0.6) 0%, rgba(232, 88, 42, 0) 65%);
+  opacity: 0.4;
+  z-index: 2;
   pointer-events: none;
+  /* Sin mix-blend-mode ni filter:blur — Safari móvil los ignora con position:fixed */
+  -webkit-filter: blur(80px);
   filter: blur(80px);
-  mix-blend-mode: screen; /* Efecto de brillo de luz sobre el fondo oscuro */
 }
 
 @media (max-width: 480px) {
   .ambient-glow {
-    top: 28vh; /* En celular el nombre cae un poco más abajito debido al padding global */
-    width: 300px;
-    height: 300px;
+    top: 22vh;
+    width: 350px;
+    height: 350px;
+    opacity: 0.5; /* Un poco más fuerte en móvil para compensar pantalla pequeña */
   }
 }
 
