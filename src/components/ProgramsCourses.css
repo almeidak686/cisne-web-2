@@ -48,15 +48,15 @@
 .program-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4; /* Adapts height perfectly to mobile screens to show the whole body */
-  max-height: 450px; /* Caps height on large desktop screens */
+  aspect-ratio: 2 / 3; /* Taller ratio means sides get cropped (zoomed in horizontally) without cutting vertical head/feet */
+  max-height: 550px; /* Caps height on large desktop screens */
 }
 
 .program-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%; /* Balanced to show face and legs */
+  object-position: center 25%; /* Keeps head and feet perfectly within frame */
   filter: brightness(0.85); /* Slightly lighter as requested */
   position: absolute;
   top: 0;
