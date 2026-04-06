@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ProgramDetails.css';
 
 export default function ProgramDetails() {
   const navigate = useNavigate();
   const base = import.meta.env.BASE_URL;
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Scroll to top on load
   useEffect(() => {
@@ -76,10 +77,10 @@ export default function ProgramDetails() {
         <section className="results-section">
           <h3 className="section-title">RESULTADOS <span className="star-icon">⭐</span></h3>
           <div className="carousel-container">
-            <div className="carousel-item">
+            <div className="carousel-item" onClick={() => setSelectedImage(`${base}images/Gemini_Generated_Image_.png`)} style={{cursor: 'zoom-in'}}>
               <img src={`${base}images/Gemini_Generated_Image_.png`} style={{objectFit: 'cover'}} alt="Transformación Antes y Después" />
             </div>
-            <div className="carousel-item">
+            <div className="carousel-item" onClick={() => setSelectedImage(`${base}images/WhatsApp Image 2026-03-01 at 14.01.30.jpeg`)} style={{cursor: 'zoom-in'}}>
               <img src={`${base}images/WhatsApp Image 2026-03-01 at 14.01.30.jpeg`} style={{objectFit: 'cover'}} alt="Transformación Cliente" />
             </div>
           </div>
@@ -126,6 +127,13 @@ export default function ProgramDetails() {
         </section>
 
       </div>
+
+      {/* Global Lightbox for Program Details */}
+      {selectedImage && (
+        <div className="lightbox-modal" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="Transformación Ampliada" />
+        </div>
+      )}
     </div>
   );
 }

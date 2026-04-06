@@ -12,6 +12,7 @@ function App() {
         <source src={`${base}videos/ssstik.io_1775490866311.mp4`} type="video/mp4" />
       </video>
       <div className="video-overlay"></div>
+      <div className="ambient-glow"></div>
       
       <Routes>
         <Route path="/" element={<Home />} />

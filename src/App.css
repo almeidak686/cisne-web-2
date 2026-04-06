@@ -42,3 +42,54 @@
     max-width: 100%;
   }
 }
+
+/* ====== Nuevos Efectos ====== */
+
+.ambient-glow {
+  position: fixed;
+  top: 18vh; /* Altura ideal en PC para coincidir con el nombre de Cisne */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+  opacity: 0.08; /* Casi imperceptible, ultra sutil */
+  z-index: 2; /* Encima del video, debajo del contenido general de la app */
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+@media (max-width: 480px) {
+  .ambient-glow {
+    top: 28vh; /* En celular el nombre cae un poco más abajito debido al padding global */
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Global Lightbox Effect para Imágenes (Transformaciones) */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.lightbox-modal img {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
