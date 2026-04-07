@@ -66,8 +66,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 55%; /* Empieza poco debajo de la mitad */
-  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+  height: 40%; /* Más bajo para no tapar la cola */
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
   z-index: 2;
 }
 
@@ -99,7 +99,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem;
+  padding: 0.8rem 1.2rem;
   z-index: 3;
 }
 
