@@ -26,10 +26,18 @@ export default function PlanCard() {
         <p className="plan-subtitle">+ videos explicativos</p>
         
         <ul className="features-list">
-          <li><span className="feature-icon">📅</span> Plan estructurado semanal</li>
-          <li><span className="feature-icon">▶️</span> Videos explicativos en HD</li>
-          <li><span className="feature-icon">✅</span> Rutina completa Torso + Pierna</li>
-          <li><span className="feature-icon">♾️</span> Acceso de por vida</li>
+          <li>
+            <svg className="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Plan estructurado semanal
+          </li>
+          <li>
+            <svg className="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            Videos explicativos en HD
+          </li>
+          <li>
+            <svg className="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Rutina completa Torso + Pierna
+          </li>
         </ul>
 
         <button className="buy-button" onClick={() => alert('Próximamente: Integración con Stripe')}>
