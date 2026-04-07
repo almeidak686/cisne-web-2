@@ -14,34 +14,61 @@
   border-color: rgba(192, 132, 252, 0.6) !important;
 }
 
+/* Badge a la izquierda, precio a la derecha — sin solaparse */
 .pulse-badge {
   position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 10px;
   background: var(--accent-color);
   color: var(--bg-color);
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 700;
-  padding: 3px 14px;
+  padding: 3px 10px;
   border-radius: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   animation: pulseBadge 2s infinite;
   z-index: 5;
   white-space: nowrap;
 }
 @keyframes pulseBadge {
   0% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(192, 132, 252, 0); }
+  70% { box-shadow: 0 0 0 8px rgba(192, 132, 252, 0); }
   100% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0); }
 }
 
-/* Image Section */
+.plan-image-price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2px 8px;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.old-price {
+  color: #8c8c94;
+  text-decoration: line-through;
+  font-size: 0.7rem;
+}
+
+.new-price {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Image — compacta pero sin cortar rostro */
 .plan-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5; /* Vertical compacto */
   overflow: hidden;
 }
 
@@ -57,75 +84,47 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 30%;
   background: linear-gradient(to top, rgba(20, 20, 25, 1) 0%, transparent 100%);
 }
 
-.plan-image-price {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 0.3rem 0.8rem;
-  border-radius: 30px;
-  z-index: 3;
-}
-
-.old-price {
-  color: #8c8c94;
-  text-decoration: line-through;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.new-price {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
-/* Body Section — Compacto */
+/* Body — ultra compacto */
 .plan-body {
-  padding: 1rem 1.2rem 1.5rem 1.2rem;
+  padding: 0.6rem 1rem 1rem 1rem;
 }
 
 .plan-title {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
   letter-spacing: -0.3px;
 }
 
 .plan-subtitle {
   color: var(--text-secondary);
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 .features-list {
   list-style: none;
   text-align: left;
-  margin-bottom: 1.2rem;
-  font-size: 0.82rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   padding: 0;
 }
 .features-list li {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
+  line-height: 1.2;
 }
 
-/* SVG Line Icons */
 .feat-icon {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
   stroke: var(--accent-color);
 }
@@ -134,12 +133,12 @@
   width: 100%;
   background: var(--accent-color);
   color: var(--bg-color);
-  font-size: 0.95rem;
-  padding: 0.9rem;
+  font-size: 0.85rem;
+  padding: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
   cursor: pointer;
   transition: all 0.3s ease;

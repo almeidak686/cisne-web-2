@@ -6,19 +6,18 @@ export default function PlanCard() {
 
   return (
     <div className="plan-card glass-panel">
-      <div className="pulse-badge">🔥 Más Vendido</div>
-      
       <div className="plan-image-container">
+        <div className="pulse-badge">🔥 Más Vendido</div>
+        <div className="plan-image-price">
+          <span className="old-price">$20</span>
+          <span className="new-price">$10</span>
+        </div>
         <img 
           src={`${base}images/rutina4dias.png`} 
           alt="Rutina Completa 4 Días" 
           className="plan-image"
         />
         <div className="plan-image-overlay"></div>
-        <div className="plan-image-price">
-          <span className="old-price">$20</span>
-          <span className="new-price">$10</span>
-        </div>
       </div>
 
       <div className="plan-body">
