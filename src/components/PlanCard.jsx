@@ -13,7 +13,7 @@ export default function PlanCard() {
           <span className="new-price">$10</span>
         </div>
         <img 
-          src={`${base}images/rutina4dias.png`} 
+          src={`${base}images/espalda_hd.png`} 
           alt="Rutina Completa 4 Días" 
           className="plan-image"
         />
