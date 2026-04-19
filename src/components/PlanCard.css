@@ -129,6 +129,23 @@
   stroke: var(--accent-color);
 }
 
+.plan-note {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  margin: 0 0 0.8rem 0;
+  border-left: 2px solid var(--accent-color);
+  background: rgba(192, 132, 252, 0.06);
+  border-radius: 4px;
+}
+.plan-note strong {
+  color: var(--accent-color);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
 .buy-button {
   width: 100%;
   background: var(--accent-color);
